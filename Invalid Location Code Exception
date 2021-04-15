@@ -1,0 +1,23 @@
+package day7.exceptionHandlingTasks;
+
+public class InvalidLocationCodeException extends Exception{
+	String exceptionMessage="";
+
+	
+	
+	public InvalidLocationCodeException() {
+		super();
+	}
+
+	public InvalidLocationCodeException(String message) {
+		super(message);
+		this.exceptionMessage = message;
+	}
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "Invalid Location Code Exception : "+exceptionMessage;
+	}	
+
+}
