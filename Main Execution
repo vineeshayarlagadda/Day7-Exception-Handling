@@ -1,0 +1,27 @@
+package day7.exceptionHandlingTasks;
+
+
+public class MainExecution {
+
+	public static void main(String[] args) throws InvalidLocationCodeException{
+		
+		EmployeeService service = new EmployeeService();
+		String codes[] = service.getEmployeeCodes();
+
+		
+		CheckLocations cl = new CheckLocations();
+ 		try {
+ 			String code[] = service.getEmployeeLocationCodes();
+ 			for (int i = 0;i < codes.length;i++) {
+ 				System.out.println("Employee id : "+codes[i]);
+	            cl.getEmployeeLocation(codes[i],code[i]);
+	            System.out.println();
+ 			}
+		}
+		catch(Exception e){
+			System.out.println(e);
+		}
+    
+		}
+	
+	}
