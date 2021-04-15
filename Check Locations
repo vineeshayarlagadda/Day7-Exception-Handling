@@ -1,0 +1,20 @@
+package day7.exceptionHandlingTasks;
+
+public class CheckLocations {
+	public void getEmployeeLocation(String codes,String code) throws InvalidLocationCodeException{
+		System.out.println("---Employee location details---");
+		if(code.equals("011")) {
+			System.out.println(code +" - "+"Delhi");
+		}else if(code.equals("022")) {
+			System.out.println(code +" - "+"Mumbai");
+		}else if(code.equals("080")) {
+			System.out.println(code +" - "+"Bangalore");
+		}else if(code.equals("020")) {
+			System.out.println(code +" - "+"Pune");
+		}else{
+			throw new InvalidLocationCodeException("The location code of the employee is invalid");
+		}
+}
+
+
+}
